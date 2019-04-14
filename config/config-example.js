@@ -26,54 +26,20 @@ exports.issues = {
     }
   },
   area: {
+    /** 
+     * Commenting this out to (and not removing it) because we might 
+     * need it later, albeit on a smaller scale.
+
     labels: new Map([
-      ["area: accessibility", "server-misc"],
-      ["area: analytics", "server-analytics"],
-      ["area: api", "server-api"],
-      ["area: authentication", "server-authentication"],
-      ["area: bots", "server-bots"],
-      ["area: browser-support", "server-browser-support"],
-      ["area: compose", "server-compose"],
-      ["area: db cleanup", "server-misc"],
-      ["area: dependencies", "server-dependencies"],
-      ["area: documentation (api and integrations)", "server-api"],
-      ["area: documentation (developer)", "server-development"],
-      ["area: documentation (production)", "server-production"],
-      ["area: documentation (user)", "server-user-docs"],
-      ["area: emails", "server-development"],
+      ["area: compose/send", "server-compose"],
       ["area: emoji", "server-emoji"],
-      ["area: export/import", "server-misc"],
-      ["area: hotkeys", "server-hotkeys"],
-      ["area: i18n", "server-i18n"],
-      ["area: in", "server-in"],
-      ["area: integrations", "server-integrations"],
-      ["area: invitations", "server-onboarding"],
-      ["area: left-sidebar", "server-sidebars"],
-      ["area: markdown", "server-markdown"],
-      ["area: message-editing", "server-message-view"],
-      ["area: message view", "server-message-view"],
-      ["area: misc", "server-misc"],
+      ["area: message list", "server-message-view"],
       ["area: notifications", "server-notifications"],
       ["area: onboarding", "server-onboarding"],
-      ["area: portico", "server-misc"],
-      ["area: production installer", "server-production"],
-      ["area: production", "server-production"],
-      ["area: provision", "server-development"],
-      ["area: real-time sync", "server-misc"],
-      ["area: refactoring", "server-refactoring"],
-      ["area: right-sidebar", "server-sidebars"],
-      ["area: search", "server-search"],
-      ["area: settings (admin/org)", "server-settings"],
-      ["area: settings UI", "server-settings"],
-      ["area: settings (user)", "server-settings"],
-      ["area: stream settings", "server-streams"],
-      ["area: testing-coverage", "server-testing"],
-      ["area: testing-infrastructure", "server-testing"],
-      ["area: tooling", "server-tooling"],
-      ["area: topics", "server-misc"],
-      ["area: uploads", "server-misc"],
-      ["area: webpack", "server-development"]
+      ["area: realtime", "server-misc"],
+      ["area: tools", "server-tooling"]
     ]),
+    */
     references: true
   }
 };
@@ -82,7 +48,7 @@ exports.pulls = {
   status: {
     mergeConflicts: {
       label: "has conflicts",
-      comment: true
+      comment: false
     },
     wip: "[WIP]",
     size: {
@@ -93,7 +59,7 @@ exports.pulls = {
         ["size: L", 50],
         ["size: XL", 100]
       ]),
-      exclude: ["frontend_tests/", "zerver/tests/"]
+      exclude: ["generatedEs3.js", "./static/"]
     }
   },
   references: {
@@ -102,7 +68,6 @@ exports.pulls = {
       exclude: [
         "in progress",
         "good first issue",
-        "good sprint project",
         "help wanted"
       ]
     }
@@ -116,11 +81,7 @@ exports.activity = {
   inactive: "inactive",
   check: {
     repositories: [
-      "zulip/zulip",
-      "zulip/python-zulip-api",
-      "zulip/zulip-electron",
-      "zulip/zulip-terminal",
-      "zulip/zulipbot"
+      "zulip/zulip-mobile"
     ],
     interval: 6,
     reminder: 10,
